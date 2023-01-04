@@ -118,12 +118,9 @@ class _RegistrationState extends State<Registration> {
         child: Column(
           children: [
             //BackgroundDesign(),
-            Padding(
-              padding: const EdgeInsets.all(0),
-              child: Container(
-                  height: 200,
+            Container(
+                height: 200,
         child: Image.asset("assets/agrisakthi.jpg")),
-            ),
                   SizedBox(height: 5),
                   NameField,
                   SizedBox(height: 10),
