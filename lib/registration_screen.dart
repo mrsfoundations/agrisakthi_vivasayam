@@ -13,7 +13,7 @@ class _RegistrationState extends State<Registration> {
   String? Phonenumber;
   String? Address;
   String? District;
-  String? Role;
+
   @override
   Widget build(BuildContext context) {
     final TextEditingController NameControler = TextEditingController();
