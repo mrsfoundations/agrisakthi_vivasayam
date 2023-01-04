@@ -17,7 +17,7 @@ class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
     final TextEditingController NameControler = TextEditingController();
-    final TextEditingController PhonenumberControler= TextEditingController();
+    final TextEditingController PhonenumberControler = TextEditingController();
     final TextEditingController AddressControler = TextEditingController();
     final TextEditingController DistrictControler = TextEditingController();
     //Name
@@ -27,12 +27,10 @@ class _RegistrationState extends State<Registration> {
       },
       autofocus: false,
       controller: NameControler,
-      onSaved: (value) {
-
-      },
+      onSaved: (value) {},
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-        labelText:"பெயர்",
+        labelText: "பெயர்",
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
@@ -41,16 +39,14 @@ class _RegistrationState extends State<Registration> {
     //Address
     final AddressField = TextFormField(
       onChanged: (value) {
-        Address= value;
+        Address = value;
       },
       autofocus: false,
       controller: AddressControler,
-      onSaved: (value) {
-
-      },
+      onSaved: (value) {},
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-        labelText:"முகவரி",
+        labelText: "முகவரி",
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
@@ -63,12 +59,10 @@ class _RegistrationState extends State<Registration> {
       },
       autofocus: false,
       controller: DistrictControler,
-      onSaved: (value) {
-
-      },
+      onSaved: (value) {},
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-        labelText:"மாவட்டம்",
+        labelText: "மாவட்டம்",
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
@@ -81,60 +75,55 @@ class _RegistrationState extends State<Registration> {
       },
       autofocus: false,
       controller: PhonenumberControler,
-      onSaved: (value) {
-
-      },
+      onSaved: (value) {},
       decoration: InputDecoration(
         contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-        labelText:"தொலைபேசி எண்",
+        labelText: "தொலைபேசி எண்",
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
         ),
       ),
     );
     //Submit
-    final LoginButton=ElevatedButton(
-          onPressed: () async{
-            print(Name);
-            print(Address);
-            print(Phonenumber);
-            print(District);
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => AnotherResponce()));
-          }, child: Text("சமர்ப்பிக்கவும்"),
-          style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Colors.green),
-        )
-    );
+    final LoginButton = ElevatedButton(
+        onPressed: () async {
+          print(Name);
+          print(Address);
+          print(Phonenumber);
+          print(District);
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => AnotherResponce()));
+        },
+        child: Text("சமர்ப்பிக்கவும்"),
+        style: ButtonStyle(
+          backgroundColor: MaterialStatePropertyAll<Color>(Colors.green),
+        ));
 
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Text("AgriSakthi_Vivasayam"),
       ),
-      body:Padding(
+      body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
-        child: Column(
-          children: [
-            //BackgroundDesign(),
-            Container(
-                height: 200,
-        child: Image.asset("assets/agrisakthi.jpg")),
-                  SizedBox(height: 5),
-                  NameField,
-                  SizedBox(height: 10),
-                  PhonenumberField,
-                  SizedBox(height: 15),
-                  AddressField,
-                  SizedBox(height: 10),
-                  DistrictField,
-                  SizedBox(height: 10),
-                  LoginButton,
-                ],
-              ),
-
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(height: 200, child: Image.asset("assets/agrisakthi.jpg")),
+              SizedBox(height: 5),
+              NameField,
+              SizedBox(height: 10),
+              PhonenumberField,
+              SizedBox(height: 15),
+              AddressField,
+              SizedBox(height: 10),
+              DistrictField,
+              SizedBox(height: 10),
+              LoginButton,
+            ],
           ),
-        );
+        ),
+      ),
+    );
   }
 }

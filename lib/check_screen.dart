@@ -23,10 +23,10 @@ class _RolebasedEntryState extends State<RolebasedEntry> {
     );
     final AdminButton=ElevatedButton(
         onPressed: () async{
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => Registration()));
+          // Navigator.push(
+          //     context,
+          //     MaterialPageRoute(
+          //         builder: (context) => Registration()));
         }, child: Text("நிர்வாகம்"),
         style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Colors.green),
         )

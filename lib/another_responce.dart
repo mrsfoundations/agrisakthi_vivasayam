@@ -68,10 +68,10 @@ class _AnotherResponceState extends State<AnotherResponce> {
                     ), //SizedBox
                     GestureDetector(
                       onTap: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) => ));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Registration()));
                       },
                       child: const Padding(
                         padding: EdgeInsets.all(20),
